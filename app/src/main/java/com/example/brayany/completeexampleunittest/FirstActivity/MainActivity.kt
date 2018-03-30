@@ -1,8 +1,9 @@
-package com.example.brayany.completeexampleunittest
+package com.example.brayany.completeexampleunittest.FirstActivity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.brayany.completeexampleunittest.R
 import com.example.brayany.completeexampleunittest.interfaces.MainContract
 import kotlinx.android.synthetic.main.activity_main.*
 
