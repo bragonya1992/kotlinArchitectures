@@ -23,7 +23,8 @@ import org.junit.runner.RunWith
 import org.junit.Assert.*
 import org.junit.Rule
 import javax.inject.Provider
-
+import org.mockito.Mockito.mock
+import org.mockito.Mockito.verify
 /**
  * Instrumented test, which will execute on an Android device.
  *
@@ -31,7 +32,7 @@ import javax.inject.Provider
  */
 @RunWith(AndroidJUnit4::class)
 class MainViewTests {
-    val mockUserAction = MAPresenter()
+    val mockUserAction = mock(MainContract.UserAction::class.java)
 
     @get:Rule
     val activityTestRule = object : ActivityTestRule<MainActivity>(MainActivity::class.java, true, true) {
@@ -48,7 +49,7 @@ class MainViewTests {
     fun clickOnFabCallToCreateTopic() {
         onView(withId(R.id.fab)).perform(click())
 
-        //(mockUserAction).createTopic(view = activityTestRule.activity)
+        verify(mockUserAction).createTopic(view = activityTestRule.activity)
     }
 
     fun createFakeMainActivityInjector(block : MainActivity.() -> Unit)
