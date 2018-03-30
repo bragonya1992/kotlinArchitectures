@@ -7,6 +7,9 @@ import com.example.brayany.completeexampleunittest.interfaces.MainContract
  */
 
 class MAPresenter: MainContract.UserAction {
+    override fun sayHello(): String {
+        return "hello"
+    }
 
     override fun createTopic(view: MainContract.View) {
         view.showClickText()
