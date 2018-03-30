@@ -2,7 +2,6 @@ package com.example.brayany.completeexampleunittest.App
 
 import android.app.Activity
 import android.app.Application
-import com.example.brayany.completeexampleunittest.App.DaggerAppComponent
 import dagger.android.DispatchingAndroidInjector
 import dagger.android.HasActivityInjector
 import javax.inject.Inject

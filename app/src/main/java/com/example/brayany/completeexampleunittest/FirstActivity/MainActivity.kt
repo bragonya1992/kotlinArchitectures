@@ -5,15 +5,18 @@ import android.os.Bundle
 import android.util.Log
 import com.example.brayany.completeexampleunittest.R
 import com.example.brayany.completeexampleunittest.interfaces.MainContract
+import dagger.android.AndroidInjection
 import kotlinx.android.synthetic.main.activity_main.*
+import javax.inject.Inject
 
 class MainActivity : AppCompatActivity(),MainContract.View {
+    @Inject lateinit var userAction: MainContract.UserAction
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        fab.setOnClickListener({ Log.d("press","fab")})
+        AndroidInjection.inject(this)
+        fab.setOnClickListener { userAction.createTopic(this) }
     }
 
     override fun showClickText() {

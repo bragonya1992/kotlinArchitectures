@@ -3,12 +3,13 @@ package com.example.brayany.completeexampleunittest.App
 import android.app.Application
 import dagger.BindsInstance
 import dagger.Component
+import dagger.android.AndroidInjectionModule
 
 /**
  * Created by brayany on 3/29/2018.
  */
 
-@Component(modules = [ActivityBuilder::class])
+@Component(modules = [AndroidInjectionModule::class,ActivityBuilder::class])
 interface AppComponent {
     @Component.Builder
     interface Builder {
