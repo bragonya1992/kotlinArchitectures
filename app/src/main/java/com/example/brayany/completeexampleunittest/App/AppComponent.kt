@@ -1,7 +1,6 @@
-package com.example.brayany.completeexampleunittest.DaggerFiles
+package com.example.brayany.completeexampleunittest.App
 
 import android.app.Application
-import com.example.brayany.completeexampleunittest.MasterApp
 import dagger.BindsInstance
 import dagger.Component
 
