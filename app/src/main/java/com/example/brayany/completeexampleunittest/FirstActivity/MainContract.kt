@@ -11,5 +11,6 @@ interface MainContract {
 
     interface UserAction {
         fun createTopic(view: View)
+        fun getHello():String
     }
 }
