@@ -5,8 +5,6 @@ package com.example.brayany.completeexampleunittest.FirstActivity
  */
 
 class MAPresenter: MainContract.UserAction {
-    override fun getHello(): String ="Hello"
-
     override fun createTopic(view: MainContract.View) {
         view.showClickText()
     }

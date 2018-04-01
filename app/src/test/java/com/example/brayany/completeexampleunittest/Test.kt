@@ -30,9 +30,6 @@ class Test : KoinTest {
 
     @Test
     fun clickOnFabCallToCreateTopic() {
-        //onView(withId(R.id.fab)).perform(click())
-        assert(presenter.getHello().equals("Hello"))
-        //verify(presenter).createTopic(view = activityTestRule.activity)
 
     }
 }
